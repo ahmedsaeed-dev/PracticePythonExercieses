@@ -9,7 +9,7 @@ Remember the rules:
 import random
 
 # list for bot's random repo
-enum = ['r', 'p', 's']
+enum = ['Rock', 'Paper', 'Scissors']
 
 choice = ''
 while 'n' != choice.lower():
@@ -24,13 +24,13 @@ while 'n' != choice.lower():
     player2 = random.choice(enum)
 
     print("Bot: {}\n".format(player2))
-    if 'r' == player1.lower() and 's' == player2.lower():
+    if 'r' == player1.lower() and 's' == player2[0].lower():
         print("\tYou win!")
-    elif 's' == player1.lower() and 'p' == player2.lower():
+    elif 's' == player1.lower() and 'p' == player2[0].lower():
         print("\tYou win!")
-    elif 'p' == player1.lower() and 'r' == player2.lower():
+    elif 'p' == player1.lower() and 'r' == player2[0].lower():
         print("\tYou win!")
-    elif player1.lower() == player2.lower():
+    elif player1.lower() == player2[0].lower():
         print("\tIt's a tie!!")
     else:
         print("You lose!")
