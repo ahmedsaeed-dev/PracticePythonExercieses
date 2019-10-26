@@ -11,14 +11,17 @@ import random
 # list for bot's random repo
 enum = ['Rock', 'Paper', 'Scissors']
 
-choice = ''
-while 'n' != choice.lower():
+while True:
     print("""
     Rock:       R or r
     Paper:      P or p
     Scissors:   S or s
+    Quit:       Q or q
     """)
+
     player1 = str(input("Selection: "))
+    if player1[0].lower() == 'q':
+        break
 
     # grabs random selection from enum list
     player2 = random.choice(enum)
@@ -34,7 +37,5 @@ while 'n' != choice.lower():
         print("\tIt's a tie!!")
     else:
         print("You lose!")
-
-    choice = str(input('\nPlay again? Y/N: '))
 
 print("\nGoodbye...")
