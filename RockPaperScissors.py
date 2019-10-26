@@ -12,13 +12,7 @@ import random
 enum = ['Rock', 'Paper', 'Scissors']
 
 while True:
-    print("""
-    Rock:       R or r
-    Paper:      P or p
-    Scissors:   S or s
-    Quit:       Q or q
-    """)
-
+    print("\nRock, Paper, or Scissors? Q to quit...")
     player1 = str(input("Selection: "))
     if player1[0].lower() == 'q':
         break
@@ -27,13 +21,13 @@ while True:
     player2 = random.choice(enum)
 
     print("Bot: {}\n".format(player2))
-    if 'r' == player1.lower() and 's' == player2[0].lower():
+    if 'r' == player1[0].lower() and 's' == player2[0].lower():
         print("\tYou win!")
-    elif 's' == player1.lower() and 'p' == player2[0].lower():
+    elif 's' == player1[0].lower() and 'p' == player2[0].lower():
         print("\tYou win!")
-    elif 'p' == player1.lower() and 'r' == player2[0].lower():
+    elif 'p' == player1[0].lower() and 'r' == player2[0].lower():
         print("\tYou win!")
-    elif player1.lower() == player2[0].lower():
+    elif player1[0].lower() == player2[0].lower():
         print("\tIt's a tie!!")
     else:
         print("You lose!")
