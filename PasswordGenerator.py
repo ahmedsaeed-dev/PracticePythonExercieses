@@ -15,7 +15,7 @@ def password_generator(n, hard):
     if hard:
         library += special
     password = ''.join(random.sample(library, n))
-    print(password)
+    print('password: ' + password)
 
 
 choice = str(input("Would you like your password to be hard? Y/N: "))
