@@ -12,6 +12,6 @@ c = []
 for i in a:
     for j in b:
         # if current iterations are equal and  new list doesn't already hold value, append
-        if i == j and not c.__contains__(i):
+        if i == j and i not in c:
             c.append(i)
 print(c)

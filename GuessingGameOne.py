@@ -7,16 +7,16 @@ import random
 
 answer = random.randint(1, 9)
 count = 1
-val = int(input("\nGuess a number between 1 and 9: "))
+guess = int(input("\nGuess a number between 1 and 9: "))
 
 while True:
-    if val == answer:
+    if guess == answer:
         break
-    elif val < answer:
+    elif guess < answer:
         print("\nToo low!")
-    elif val > answer:
+    elif guess > answer:
         print("\nToo high!")
-    val = int(input("Guess again: "))
+    guess = int(input("Guess again: "))
     count += 1
 
 print("\nYou got it in {} tries!".format(count))
